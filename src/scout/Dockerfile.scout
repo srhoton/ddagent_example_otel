@@ -1,0 +1,9 @@
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
+WORKDIR /app
+EXPOSE 8080
+
+COPY app/release  .
+
+RUN apt update && apt install -y curl
+
+ENTRYPOINT ["dotnet", "src.dll", "--urls", "http://*:8080" ]

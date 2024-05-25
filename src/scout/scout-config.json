@@ -1,0 +1,9 @@
+{
+    "CIPipeline": {
+        "_comment": "If customBuildScript is specified, buildProject will be ignored. Same rule applied to unitTestProjects and customUnitTestScript, also if customPublishScript is specified, it will be used for publishing",
+        "buildProjects": ["src/src.csproj"],
+        "unitTestProjects": ["src.Tests/src.Tests.csproj"],
+        "customBuildScript": null,
+        "customUnitTestScript": null
+    }
+}
