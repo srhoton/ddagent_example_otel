@@ -35,7 +35,7 @@ app.MapGet("/", ([FromServices] Instrumentation metrics, ILogger<Program> logger
     // src of how to use the metrics
     metrics.RequestCount.Add(1);
     metrics.RequestDuration.Record(100, tag: new ("route", "/"));
-    logger.LogInformation("Hello, from ADOT logger!");
+    logger.LogWarning("Hello, from ADOT logger!");
     return Results.Ok("Hello, World!");
 });
 
